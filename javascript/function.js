@@ -33,5 +33,42 @@ function printMessage() {
 printMessage();
 
 const add = (a, b) => a + b;
+const simplePrint = () => console.log('simlePrint');
+
+simplePrint();
 
 console.log(add(1, 3));
+
+
+// IIFE: Immeditely Invoked Function Expression
+(function hello() {
+  console.log('IIFE');
+})();
+
+
+// quiz
+
+const calculate = (command, a, b) => {
+  switch(command) {
+    case 'add' :  
+      return a + b;
+    break;
+    case 'substract' : 
+      return a - b;
+    break;
+    case 'divide' : 
+      return a / b;
+    break;
+    case 'multiply' : 
+      return a * b;
+    break;
+    case 'remainder' : 
+      return a % b;
+    break;
+    default : 
+     throw Error('unknown command'); 
+    
+  }
+}
+    
+console.log(calculate('substract', 1, 2));
