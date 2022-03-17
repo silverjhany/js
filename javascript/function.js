@@ -72,3 +72,5 @@ const calculate = (command, a, b) => {
 }
     
 console.log(calculate('substract', 1, 2));
+
+console.log(add(1, 3));
