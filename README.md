@@ -1,4 +1,6 @@
-## javascript study
+# Javascript Study
+
+---
 
 ## dreamcoding elly's lecture
 
