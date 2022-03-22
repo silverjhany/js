@@ -42,3 +42,6 @@ userStorage
   .then(userStorage.getRoles)
   .then(user => alert(`Hello ${user.name}, you have a ${user.role} role `))
   .catch(console.log);
+
+
+
