@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { display: flex;
+          flex-direction:column;
+          flex-wrap: nowrap;
+          
+    }
+
+    div {
+          width: 100px;
+          height: 100px;
+          background-color: pink;
+          margin-bottom: 4px;
+          border-radius: 4px;
+    }
+
+    #a {
+      background-color: plum;
+    }
+  </style>
+
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="a"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <script>
+    const box = document.querySelector('#a');
+    box.addEventListener('click', (event) => {
+      const rect = box.getBoundingClientRect();
+      console.log(rect);
+      console.log(`client: ${event.clientX} , ${event.clientY}`); // 브라우저 상위 
+      console.log(`page: ${event.pageX} , ${event.pageY}`); // page(뮨서)의 제일 상위에서부터 시작 (스크롤 포함)
+    });
+  </script>
+</body>
+</html>
