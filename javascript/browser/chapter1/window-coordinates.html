@@ -9,7 +9,7 @@
     body { display: flex;
           flex-direction:column;
           flex-wrap: nowrap;
-          
+          background-color: black;
     }
 
     div {
@@ -22,6 +22,38 @@
 
     #a {
       background-color: plum;
+    }
+    
+    aside {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .by {
+      background-color: white;
+      width: 130px;
+      height: 20px;
+      
+      
+      text-align: center;
+      
+    }
+
+    .to {
+      background-color: white;
+      width: 130px;
+      height: 20px;
+
+      text-align: center;
+    }
+
+    .into {
+      background-color: white;
+      width: 135px;
+      height: 20px;
+     
+      text-align: center;
     }
   </style>
 
@@ -53,6 +85,11 @@
   <div></div>
   <div></div>
   <div></div>
+  <aside>
+    <button class="by">Scroll by 100px(y)</button>
+    <button class="to">Scroll to 100px(y)</button>
+    <button class="into">Scroll into 100px(y)</button>
+  </aside>
   <script>
     const box = document.querySelector('#a');
     box.addEventListener('click', (event) => {
@@ -60,6 +97,22 @@
       console.log(rect);
       console.log(`client: ${event.clientX} , ${event.clientY}`); // 브라우저 상위 
       console.log(`page: ${event.pageX} , ${event.pageY}`); // page(뮨서)의 제일 상위에서부터 시작 (스크롤 포함)
+    });
+    
+    const by = document.querySelector('.by');
+    const to = document.querySelector('.to');
+    const into = document.querySelector('.into');
+
+    by.addEventListener('click', (e) => {
+      window.scrollBy({ top : 100, left : 0, behavior : 'smooth' });
+    });
+
+    to.addEventListener('click', (e) => {
+      window.scrollTo(0, 100);
+    });
+
+    into.addEventListener('click', (e) => {
+      box.scrollIntoView();
     });
   </script>
 </body>
