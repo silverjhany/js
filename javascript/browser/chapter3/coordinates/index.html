@@ -6,27 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>좌표 찾아 007</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body> 
-   <div class="coordinates">
-   </div>
-   <div class="coordinates-info">
-   </div>
-    <script>
-        
-        const coordinates = document.querySelector('.coordinates');
-        const coordinatesInfo = document.querySelector('.coordinates-info');
-
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-            console.log(x , y);
-            coordinates.style.left = x + 'px';
-            coordinates.style.top = y + 'px';
-            coordinatesInfo.style.left = x + 'px';
-            coordinatesInfo.style.top = y + 'px';
-            coordinatesInfo.innerText = x + 'px' + ', ' + y + 'px';
-        });
-    </script>
+   <!-- <div class="coordinates"></div>
+   <div class="coordinates-info"></div> -->
+   <div class="line horizontal"></div>
+   <div class="line vertical"></div>
+   <img class="target" src="img/target.png" alt="target">
+   <span class="tag"></span>
 </body>
 </html>
