@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rabbit!</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .find {
+            background-color: pink;
+            padding: 5px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="find">find a rabbit!</div>
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img id="rabbit" src="img/rabbit.png" alt="rabbit">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <img class="carrot" src="img/carrot.png" alt="carrot">
+    <script>
+        const find = document.querySelector('.find');
+        const rabbit = document.querySelector('#rabbit');
+
+        find.addEventListener('click', (e) => {
+            rabbit.scrollIntoView({behavior: 'smooth', block: 'center'});
+        });
+    </script>
+</body>
+</html>
